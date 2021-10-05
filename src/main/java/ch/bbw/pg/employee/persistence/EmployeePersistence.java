@@ -26,6 +26,17 @@ public class EmployeePersistence implements IPersistence<Employee> {
     private static EntityManager entityManager;
 
     public EmployeePersistence() {
+
+    }
+
+    @Override
+    public void close() {
+        entityManager.close();
+        factory.close();
+    }
+
+    @Override
+    public void setup() {
         factory = Persistence.createEntityManagerFactory("MyPersistenceUnit");
         entityManager = factory.createEntityManager();
     }
@@ -33,21 +44,16 @@ public class EmployeePersistence implements IPersistence<Employee> {
     @Override
     @SuppressWarnings("unchecked")
     public List<Employee> read() {
-        List<Employee> employees = null;
-        try {
-            entityManager.getTransaction().begin();
-            employees = entityManager.createNamedQuery("Employee.findAll").getResultList();
-            entityManager.getTransaction().commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-            entityManager.getTransaction().rollback();
-        }
-        return employees;
+        return getEntityManager().createNamedQuery("Employee.read").getResultList();
     }
 
     @Override
-    public void close() {
-        entityManager.close();
-        factory.close();
+    public Employee find(Long id) {
+        return entityManager.find(Employee.class, id);
+    }
+
+    @Override
+    public EntityManager getEntityManager() {
+        return entityManager;
     }
 }

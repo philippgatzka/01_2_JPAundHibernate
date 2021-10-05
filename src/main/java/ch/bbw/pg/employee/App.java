@@ -10,9 +10,9 @@ import ch.bbw.pg.employee.persistence.EmployeePersistence;
 public class App {
 
     public static void main(String[] args) {
-        System.out.println("Employee with Hibernate Entity Manager");
-        EmployeePersistence persistence = new EmployeePersistence();
-        System.out.println("List all employees: " + persistence.read());
-        persistence.close();
+        EmployeePersistence p = new EmployeePersistence();
+        p.setup();
+        System.out.println(p.read());
+        p.close();
     }
 }

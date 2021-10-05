@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82b3eb9d-543f-451c-8477-0ecafcf5158e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_JPAundHibernate.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/model/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/persistence/EmployeePersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/persistence/EmployeePersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Employee.hbm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/persistence/IPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/persistence/IPersistence.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +104,7 @@
       <workItem from="1633416084771" duration="1158000" />
       <workItem from="1633423229068" duration="300000" />
       <workItem from="1633424959941" duration="642000" />
-      <workItem from="1633429190802" duration="197000" />
+      <workItem from="1633429190802" duration="752000" />
     </task>
     <servers />
   </component>

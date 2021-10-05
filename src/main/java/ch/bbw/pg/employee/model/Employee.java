@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "employee")
-@NamedQuery(name = "Employee.findAll", query = "select e from Employee e")
+@NamedQuery(name = "Employee.read", query = "select e from Employee e")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
