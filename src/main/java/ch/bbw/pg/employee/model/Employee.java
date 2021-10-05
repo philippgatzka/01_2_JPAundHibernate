@@ -2,10 +2,9 @@ package ch.bbw.pg.employee.model;
 
 import javax.persistence.*;
 
-@Table(name = "employee", indexes = {
-        @Index(name = "departmentidx", columnList = "departmentidfs")
-})
 @Entity
+@Table(name = "employee")
+@NamedQuery(name = "Employee.findAll", query = "select e from Employee e")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

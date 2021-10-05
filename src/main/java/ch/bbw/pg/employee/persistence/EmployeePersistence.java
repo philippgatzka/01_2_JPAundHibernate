@@ -9,6 +9,9 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.List;
 
 /**
@@ -18,14 +21,13 @@ import java.util.List;
  */
 public class EmployeePersistence implements IPersistence<Employee> {
 
-    private static SessionFactory sessionFactory;
-    private static Session session;
+
+    private static EntityManagerFactory factory;
+    private static EntityManager entityManager;
 
     public EmployeePersistence() {
-        Configuration config = new Configuration().configure();
-        config.addAnnotatedClass(Employee.class);
-        ServiceRegistry registry = new StandardServiceRegistryBuilder().applySettings(config.getProperties()).build();
-        sessionFactory = config.buildSessionFactory();
+        factory = Persistence.createEntityManagerFactory("MyPersistenceUnit");
+        entityManager = factory.createEntityManager();
     }
 
     @Override
@@ -33,19 +35,19 @@ public class EmployeePersistence implements IPersistence<Employee> {
     public List<Employee> read() {
         List<Employee> employees = null;
         try {
-            session = sessionFactory.openSession();
-            Transaction transaction = session.beginTransaction();
-            employees = session.createQuery("select e from Employee e").getResultList();
-            transaction.commit();
+            entityManager.getTransaction().begin();
+            employees = entityManager.createNamedQuery("Employee.findAll").getResultList();
+            entityManager.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
-            session.getTransaction().rollback();
+            entityManager.getTransaction().rollback();
         }
         return employees;
     }
 
     @Override
     public void close() {
-        sessionFactory.close();
+        entityManager.close();
+        factory.close();
     }
 }

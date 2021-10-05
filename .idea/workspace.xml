@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82b3eb9d-543f-451c-8477-0ecafcf5158e" name="Changes" comment="" />
+    <list default="true" id="82b3eb9d-543f-451c-8477-0ecafcf5158e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_JPAundHibernate.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/persistence/EmployeePersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/bbw/pg/employee/persistence/EmployeePersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Employee.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Hibernate.cfg.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +23,7 @@
       <list>
         <option value="Class" />
         <option value="JpaEntity" />
+        <option value="Tag Library Descriptor" />
       </list>
     </option>
   </component>
@@ -48,6 +57,9 @@
       </map>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
+  </component>
   <component name="ProjectId" id="1z4nAM4aPcvAIywbQCiTGRjM9aT" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -60,7 +72,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -92,6 +106,8 @@
       <updated>1633416083415</updated>
       <workItem from="1633416084771" duration="1158000" />
       <workItem from="1633423229068" duration="300000" />
+      <workItem from="1633424959941" duration="642000" />
+      <workItem from="1633429190802" duration="197000" />
     </task>
     <servers />
   </component>
